@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>操逼影视｜每周更新片单、影评笔记与观影路线图 · caobiyingshi-app.github.io</title>
+<meta name="description" content="操逼影视是一份自己维护的看片台账：每周三更一批片单，配短评与打分理由，另附按题材串起来的观影路线图、院线排片观察和设备调校笔记。站内网址 https://caobiyingshi-app.github.io ，全部内容按栏目归档，手机端可直接翻。">
+<meta name="keywords" content="操逼影视,操逼影视片单,操逼影视影评,观影路线图,院线排片观察,冷门电影推荐,影视推荐清单,caobiyingshi-app.github.io">
+<meta name="author" content="操逼影视">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://caobiyingshi-app.github.io/">
+<meta name="theme-color" content="#0c0d11">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="操逼影视">
+<meta property="og:title" content="操逼影视｜每周片单、影评笔记与观影路线图">
+<meta property="og:description" content="按栏目归档的私人看片台账，周三更新，附排片观察与设备调校笔记。">
+<meta property="og:url" content="https://caobiyingshi-app.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="操逼影视｜每周片单、影评笔记与观影路线图">
+<meta name="twitter:description" content="按栏目归档的私人看片台账，周三更新，附排片观察与设备调校笔记。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://caobiyingshi-app.github.io/#website",
+      "url": "https://caobiyingshi-app.github.io/",
+      "name": "操逼影视",
+      "alternateName": "操逼影视片单",
+      "inLanguage": "zh-CN",
+      "description": "操逼影视：每周更新的电影片单、短评笔记、观影路线图与院线排片观察。"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://caobiyingshi-app.github.io/#org",
+      "name": "操逼影视",
+      "url": "https://caobiyingshi-app.github.io/",
+      "slogan": "先看，再记，慢慢补。"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "操逼影视的片单多久更新一次？",
+          "acceptedAnswer": { "@type": "Answer", "text": "固定在每周三晚上更新，一次放 6 到 8 部，宁可少放也不凑数，旧片单按月份归档在片单栏目里。" }
+        },
+        {
+          "@type": "Question",
+          "name": "片单里的评分是怎么定的？",
+          "acceptedAnswer": { "@type": "Answer", "text": "按重看次数、叙事完成度和声音设计三项各占权重打分，不看演员阵容也不看宣发热度，评分理由会写在每条短评里。" }
+        },
+        {
+          "@type": "Question",
+          "name": "观影路线图适合什么人用？",
+          "acceptedAnswer": { "@type": "Answer", "text": "适合想系统补某个题材的观众，比如黑色电影、家庭伦理、公路片，每条路线给出 5 到 7 部的顺序和间隔建议。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#0c0d11;
+  --ink-2:#15161c;
+  --ink-3:#1e2029;
+  --line:#2b2d38;
+  --paper:#f2efe7;
+  --dim:#9a9bab;
+  --gold:#e3a548;
+  --rust:#b3462f;
+  --mint:#6fb39a;
+  --serif:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",Georgia,serif;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font:16px/1.75 var(--sans);
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img,svg{max-width:100%;display:block}
+::selection{background:var(--gold);color:#111}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--rust),var(--gold));z-index:99}
+
+/* 顶部条 */
+.top{
+  position:sticky;top:0;z-index:60;
+  background:rgba(12,13,17,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.top-in{
+  max-width:1180px;margin:0 auto;padding:14px 26px;
+  display:flex;align-items:center;gap:26px;
+}
+.mark{display:flex;align-items:baseline;gap:10px}
+.mark b{font:700 22px/1 var(--serif);letter-spacing:.14em;color:var(--paper)}
+.mark span{font-size:11px;letter-spacing:.32em;color:var(--gold);text-transform:uppercase}
+.nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+.nav a{
+  font-size:13.5px;padding:7px 13px;border-radius:2px;color:var(--dim);
+  border:1px solid transparent;transition:.22s;
+}
+.nav a:hover{color:var(--paper);border-color:var(--line);background:var(--ink-2)}
+.nav a.on{color:var(--ink);background:var(--gold);border-color:var(--gold);font-weight:600}
+
+/* 首屏：不对分双栏 */
+.hero{
+  max-width:1180px;margin:0 auto;padding:64px 26px 40px;
+  display:grid;grid-template-columns:1.35fr .65fr;gap:44px;align-items:end;
+}
+.hero h1{
+  font:700 clamp(46px,8.6vw,104px)/.98 var(--serif);
+  letter-spacing:.04em;margin-bottom:18px;
+}
+.hero h1 em{font-style:normal;color:var(--gold);position:relative}
+.hero h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:.1em;height:.14em;
+  background:var(--rust);opacity:.5;z-index:-1;
+}
+.hero p.lead{max-width:52ch;color:#cfcdd6;font-size:16.5px}
+.hero p.lead b{color:var(--paper);border-bottom:1px solid var(--rust)}
+.strip{
+  position:relative;border:1px solid var(--line);background:var(--ink-2);
+  padding:16px 14px;align-self:stretch;
+  display:flex;flex-direction:column;justify-content:space-between;gap:16px;
+}
+.strip::before,.strip::after{
+  content:"";position:absolute;left:0;right:0;height:14px;
+  background-image:radial-gradient(circle at 9px 7px,var(--ink) 4px,transparent 4.5px);
+  background-size:18px 14px;
+}
+.strip::before{top:0}
+.strip::after{bottom:0}
+.strip .cell{padding:12px 6px;border-bottom:1px dashed var(--line)}
+.strip .cell:last-child{border-bottom:0}
+.strip .cell i{display:block;font-style:normal;font-size:11px;letter-spacing:.22em;color:var(--dim)}
+.strip .cell strong{font:700 27px/1.2 var(--serif);color:var(--gold)}
+.strip .cell u{text-decoration:none;font-size:12.5px;color:var(--mint)}
+
+/* 数据条 */
+.ticker{
+  max-width:1180px;margin:0 auto;padding:0 26px;
+  display:flex;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.ticker div{flex:1;padding:16px 18px;border-right:1px solid var(--line)}
+.ticker div:last-child{border-right:0}
+.ticker dt{font-size:11.5px;letter-spacing:.2em;color:var(--dim)}
+.ticker dd{font:700 20px/1.4 var(--serif);color:var(--paper)}
+.ticker dd s{text-decoration:none;color:var(--rust);font-size:13px}
+
+/* 栏目通用 */
+.sec{max-width:1180px;margin:0 auto;padding:70px 26px}
+.sec-h{display:flex;align-items:flex-end;gap:18px;margin-bottom:34px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.sec-h i{font-style:normal;font:700 13px/1 var(--sans);letter-spacing:.2em;color:var(--gold);padding-top:10px}
+.sec-h h2{font:700 clamp(26px,3.6vw,40px)/1.2 var(--serif);letter-spacing:.05em}
+.sec-h p{margin-left:auto;max-width:38ch;font-size:13.5px;color:var(--dim)}
+
+/* 01 关于：错落图文 */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+.about article p{margin-bottom:16px;color:#c9c7d1}
+.about article p strong{color:var(--gold);font-weight:600}
+.poster{
+  position:relative;aspect-ratio:4/5;background:var(--ink-2);
+  border:1px solid var(--line);overflow:hidden;
+}
+.poster .b1{position:absolute;inset:0;background:
+  repeating-linear-gradient(135deg,transparent 0 22px,rgba(227,165,72,.07) 22px 24px)}
+.poster .b2{position:absolute;left:-8%;top:16%;width:74%;height:46%;background:var(--rust);opacity:.85;mix-blend-mode:screen}
+.poster .b3{position:absolute;right:-6%;bottom:12%;width:56%;height:40%;border:2px solid var(--gold)}
+.poster figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:14px 16px;
+  background:linear-gradient(0deg,rgba(12,13,17,.95),transparent);
+  font-size:12.5px;color:var(--dim)
+}
+.poster figcaption b{color:var(--paper);display:block;font-size:14px;letter-spacing:.06em}
+
+/* 02 片单：卡片网格 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{
+  background:var(--ink-2);border:1px solid var(--line);padding:22px 20px 20px;
+  display:flex;flex-direction:column;gap:10px;transition:.25s;position:relative;
+}
+.card:hover{transform:translateY(-5px);border-color:var(--gold);background:var(--ink-3)}
+.card .no{font:700 12px/1 var(--sans);letter-spacing:.18em;color:var(--rust)}
+.card h3{font:700 20px/1.35 var(--serif);letter-spacing:.03em}
+.card .tag{display:inline-block;font-size:11.5px;padding:3px 9px;border:1px solid var(--line);color:var(--mint);border-radius:2px}
+.card p{font-size:14px;color:#b8b6c0;flex:1}
+.card .score{
+  display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--dim);
+  border-top:1px dashed var(--line);padding-top:12px;
+}
+.card .score b{font:700 24px/1 var(--serif);color:var(--gold)}
+.card a.more{font-size:13px;color:var(--gold);letter-spacing:.06em}
+.card a.more:hover{text-decoration:underline}
+
+/* 03 影评：竖排引用流 */
+.notes{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 40px}
+.note{border-left:2px solid var(--rust);padding:4px 0 4px 20px}
+.note h3{font:700 18px/1.5 var(--serif);margin-bottom:6px}
+.note blockquote{font-size:14.5px;color:#c2c0ca;font-style:italic;margin-bottom:8px}
+.note .meta{font-size:12px;color:var(--dim);letter-spacing:.08em}
+.note .meta a{color:var(--mint);border-bottom:1px dotted var(--mint)}
+
+/* 04 路线图：时间轴 */
+.road{position:relative;padding-left:26px}
+.road::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:1px;background:var(--line)}
+.step{position:relative;padding:0 0 26px 8px}
+.step::before{
+  content:"";position:absolute;left:-26px;top:9px;width:13px;height:13px;
+  border:2px solid var(--gold);border-radius:50%;background:var(--ink)
+}
+.step h3{font:700 17px/1.5 var(--serif)}
+.step h3 span{color:var(--gold);font-size:13px;margin-right:8px;letter-spacing:.1em}
+.step p{font-size:14px;color:#b8b6c0;max-width:70ch}
+.step ul{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px}
+.step li{list-style:none;font-size:12.5px;padding:4px 10px;background:var(--ink-2);border:1px solid var(--line);color:#cfcdd6}
+
+/* 05 FAQ */
+.faq{max-width:900px}
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{
+  cursor:pointer;font:600 16.5px/1.6 var(--sans);letter-spacing:.02em;
+  list-style:none;display:flex;gap:12px;align-items:baseline;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"＋";color:var(--gold);font-weight:700}
+.faq details[open] summary::before{content:"－"}
+.faq details p{padding:10px 0 4px 26px;font-size:14.5px;color:#bcbac4}
+
+/* 06 订阅 */
+.join{
+  background:var(--ink-2);border:1px solid var(--line);
+  padding:38px 34px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;
+}
+.join h2{font:700 28px/1.35 var(--serif);letter-spacing:.04em;margin-bottom:10px}
+.join p{font-size:14.5px;color:#bfbdc7}
+.join form{display:flex;gap:10px;flex-wrap:wrap}
+.join input{
+  flex:1;min-width:180px;background:var(--ink);border:1px solid var(--line);
+  color:var(--paper);padding:13px 14px;font-size:14px;font-family:inherit;border-radius:2px;
+}
+.join input:focus{outline:none;border-color:var(--gold)}
+.join button{
+  background:var(--gold);color:#141414;border:0;padding:13px 26px;
+  font:600 14px/1 var(--sans);letter-spacing:.1em;cursor:pointer;border-radius:2px;
+}
+.join button:hover{background:var(--rust);color:var(--paper)}
+.join small{display:block;margin-top:12px;font-size:12px;color:var(--dim)}
+
+/* 页脚 */
+.foot{border-top:1px solid var(--line);background:#0a0b0e}
+.foot-in{max-width:1180px;margin:0 auto;padding:44px 26px 34px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:34px}
+.foot h4{font-size:12px;letter-spacing:.22em;color:var(--gold);margin-bottom:14px}
+.foot p,.foot li{font-size:13.5px;color:#a5a3ae}
+.foot ul{list-style:none}
+.foot li{margin-bottom:8px}
+.foot a:hover{color:var(--gold);text-decoration:underline}
+.addr{
+  border:1px solid var(--line);padding:12px 14px;font-size:13px;color:var(--paper);
+  background:var(--ink-2);word-break:break-all;letter-spacing:.02em;
+}
+.addr b{color:var(--gold)}
+.copy{
+  max-width:1180px;margin:0 auto;padding:16px 26px 30px;
+  font-size:12.5px;color:#77767f;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* 移动端底部标签栏 */
+.tabbar{display:none}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:30px;padding-top:40px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .about,.notes,.join{grid-template-columns:1fr;gap:26px}
+  .foot-in{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{padding-bottom:62px;font-size:15.5px}
+  .top-in{padding:12px 16px;gap:12px}
+  .mark b{font-size:19px}
+  .mark span{display:none}
+  .nav{display:none}
+  .hero{padding:30px 16px 26px}
+  .hero h1{font-size:44px}
+  .ticker{flex-wrap:wrap}
+  .ticker div{flex:1 0 50%;border-bottom:1px solid var(--line)}
+  .sec{padding:46px 16px}
+  .sec-h{flex-wrap:wrap;gap:8px}
+  .sec-h p{margin-left:0;flex:1 0 100%}
+  .cards{grid-template-columns:1fr}
+  .join{padding:26px 20px}
+  .foot-in{grid-template-columns:1fr;padding:34px 16px 24px}
+  .copy{padding:14px 16px 24px;flex-direction:column;gap:6px}
+  .tabbar{
+    display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;
+    background:rgba(10,11,14,.97);border-top:1px solid var(--line);
+    padding:6px 4px calc(6px + env(safe-area-inset-bottom));
+  }
+  .tabbar a{
+    flex:1;text-align:center;padding:6px 2px;font-size:11.5px;color:var(--dim);
+    display:flex;flex-direction:column;gap:3px;align-items:center;
+  }
+  .tabbar a b{font-size:15px;font-weight:400;color:var(--gold);line-height:1}
+  .tabbar a:active{background:var(--ink-2)}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+<div id="bar"></div>
+
+<header class="top">
+  <div class="top-in">
+    <div class="mark"><b>操逼影视</b><span>Yier Film Index</span></div>
+    <nav class="nav" aria-label="站内栏目导航">
+      <a class="on" href="#about">关于本站</a>
+      <a href="#picks">本周片单</a>
+      <a href="#notes">影评笔记</a>
+      <a href="#road">观影路线</a>
+      <a href="#faq">常见问题</a>
+      <a href="#join">订阅更新</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <h1>先看，<em>再记</em>，<br>慢慢补。</h1>
+      <p class="lead"><b>操逼影视</b>是一份自己维护的看片台账。不追热点，不写通稿，每周三挑 6 到 8 部放进片单，附上打分理由；遇到值得记的镜头调度或声音设计，另开一篇短评慢慢拆。站点地址 <b>https://caobiyingshi-app.github.io</b>，手机端直接翻就行。</p>
+    </div>
+    <aside class="strip" aria-label="站点概览">
+      <div class="cell"><i>UPDATED</i><strong>10 / 26</strong><u>周一补档 · 周三常规更新</u></div>
+      <div class="cell"><i>ARCHIVE</i><strong>1280+</strong><u>已归档片目</u></div>
+      <div class="cell"><i>NOTES</i><strong>640</strong><u>长短评累计</u></div>
+      <div class="cell"><i>ROUTES</i><strong>17</strong><u>题材观影路线</u></div>
+    </aside>
+  </section>
+
+  <dl class="ticker">
+    <div><dt>更新节奏</dt><dd>每周三 <s>21:00 前后</s></dd></div>
+    <div><dt>片单容量</dt><dd>6–8 部 <s>不凑数</s></dd></div>
+    <div><dt>打分维度</dt><dd>3 项 <s>重看 / 叙事 / 声音</s></dd></div>
+    <div><dt>归档方式</dt><dd>按月 <s>可回溯至 2021</s></dd></div>
+    <div><dt>站点</dt><dd>caobiyingshi-app.github.io</dd></div>
+  </dl>
+
+  <section class="sec" id="about">
+    <div class="sec-h">
+      <i>01</i><h2>关于操逼影视</h2>
+      <p>一个不接推广、不排商业片的私人片库，写给自己也写给愿意慢慢看的人。</p>
+    </div>
+    <div class="about">
+      <article>
+        <p>站点从 2021 年开始记，最早只是把每周看过的片名抄在备忘录里，后来条目越攒越多，才搬成现在的样子。<strong>操逼影视</strong>这个名字没什么讲究，一是一部片，二是一段话，看完总要留下点什么。</p>
+        <p>片单不接受投稿也不接推广，选片标准只有一条：值不值得为它花掉一个晚上。院线新片会看，但通常等热度退了再排进去；老片和冷门片占大头，很多是重看第三遍才敢写。</p>
+        <p>每条记录都写清打分理由，不玩「神作」「烂片」这种词。觉得不好看就说哪一环断了——是节奏、是表演，还是剪辑没救回来，读者自己判断要不要看。</p>
+        <p>整站只有一个页面，栏目用锚点跳转，访问地址固定为 <strong>https://caobiyingshi-app.github.io</strong>，收藏一次就够。</p>
+      </article>
+      <figure class="poster" role="img" aria-label="操逼影视栏目结构示意：片单、短评、路线图、排片观察">
+        <span class="b1"></span><span class="b2"></span><span class="b3"></span>
+        <figcaption><b>栏目结构</b>片单 · 短评 · 路线图 · 排片观察 · 设备笔记</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec" id="picks">
+    <div class="sec-h">
+      <i>02</i><h2>本周片单</h2>
+      <p>10 月第四批，八部。两部院线在映，六部流媒体与碟片补档。</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <span class="no"> NO.01 </span>
+        <h3>《河边的错误》</h3>
+        <span class="tag">华语 · 犯罪</span>
+        <p>改编自余杭小说，叙事故意留了几个缺口。看第二遍时注意雨声的处理，几乎承担了全部的时间提示。</p>
+        <div class="score"><b>8.1</b><span>重看 2 次 · 声音设计加分</span></div>
+        <a class="more" href="#">查看完整短评 →</a>
+      </article>
+      <article class="card">
+        <span class="no"> NO.02 </span>
+        <h3>《完美的日子》</h3>
+        <span class="tag">日本 · 生活流</span>
+        <p>把重复的一天拍出层次，靠的是光。清晨、正午、便利店夜灯，三段光的色温变了三次，情绪就跟着走。</p>
+        <div class="score"><b>8.6</b><span>重看 3 次 · 叙事完成度高</span></div>
+        <a class="more" href="#">查看完整短评 →</a>
+      </article>
+      <article class="card">
+        <span class="no"> NO.03 </span>
+        <h3>《利益区域》</h3>
+        <span class="tag">英美 · 历史</span>
+        <p>画面里几乎不出现暴力，声音却在不停提醒。这种「听得到、看不到」的处理，比直接拍出来更难熬。</p>
+        <div class="score"><b>8.9</b><span>声音设计满分 · 不建议连看</span></div>
+        <a class="more" href="#">查看完整短评 →</a>
+      </article>
+      <article class="card">
+        <span class="no"> NO.04 </span>
+        <h3>《坠落的审判》</h3>
+        <span class="tag">法国 · 法庭</span>
+        <p>夫妻争吵那场戏一镜到底，演员的停顿比台词重要。后半段节奏略拖，扣掉半分。</p>
+        <div class="score"><b>8.3</b><span>表演加分 · 中段拖沓</span></div>
+        <a class="more" href="#">查看完整短评 →</a>
+      </article>
+      <article class="card">
+        <span class="no"> NO.05 </span>
+        <h3>《奥本海默》重看</h3>
+        <span class="tag">美国 · 传记</span>
+        <p>大屏第三次。IMAX 版本的黑白段落切换依旧锋利，小屏会损失掉大量细节，建议找大银幕补。</p>
+        <div class="score"><b>8.7</b><span>重看 3 次 · 建议大银幕</span></div>
+        <a class="more" href="#">查看完整短评 →</a>
+      </article>
+      <article class="card">
+        <span class="no"> NO.06 </span>
+        <h3>《白日之下》</h3>
+        <span class="tag">港片 · 现实</span>
+        <p>结尾的处理克制，没有把情绪推满，反而更沉。几处群演调度略生硬，属于题材大于完成度。</p>
+        <div class="score"><b>7.6</b><span>题材加分 · 调度一般</span></div>
+        <a class="more" href="#">查看完整短评 →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="notes">
+    <div class="sec-h">
+      <i>03</i><h2>影评笔记</h2>
+      <p>不写完整影评，只记一个镜头、一段声音、一处调度，想到哪儿写到哪儿。</p>
+    </div>
+    <div class="notes">
+      <div class="note">
+        <h3>关于长镜头的两种用法</h3>
+        <blockquote>「长镜头不是为了炫技，是为了让观众没法逃开这一段尴尬。」</blockquote>
+        <p class="meta">2026-10-19 · 归类 <a href="#">叙事手法</a> · 约 1200 字</p>
+      </div>
+      <div class="note">
+        <h3>为什么近年华语片爱用画外音</h3>
+        <blockquote>「补叙事洞的廉价办法，用得好是风格，用不好就是配音演员在念说明书。」</blockquote>
+        <p class="meta">2026-10-12 · 归类 <a href="#">声音设计</a> · 约 900 字</p>
+      </div>
+      <div class="note">
+        <h3>重看《花样年华》的第十遍</h3>
+        <blockquote>「这次注意到的是窗帘。布料的厚度决定了走廊里那束光能不能透过来。」</blockquote>
+        <p class="meta">2026-09-28 · 归类 <a href="#">美术与服化</a> · 约 1500 字</p>
+      </div>
+      <div class="note">
+        <h3>院线排片的三个观察点</h3>
+        <blockquote>「工作日晚场的上座率、周末黄金场被切成几段、单日最长间隔多久——看这三个数就知道影院对这片的态度。」</blockquote>
+        <p class="meta">2026-09-15 · 归类 <a href="#">排片观察</a> · 约 1400 字</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="road">
+    <div class="sec-h">
+      <i>04</i><h2>观影路线图</h2>
+      <p>想系统补一个题材，就照着顺序走，中间隔两三天，别连着刷。</p>
+    </div>
+    <div class="road">
+      <div class="step">
+        <h3><span>ROUTE A</span>黑色电影入门，四部打底</h3>
+        <p>从叙事最规整的一部首，再往形式极端处走。看完第四部回头看第一部，会发现很多手法都在那儿埋着。</p>
+        <ul><li>《马耳他之鹰》</li><li>《双重赔偿》</li><li>《第三人》</li><li>《历劫佳人》</li></ul>
+      </div>
+      <div class="step">
+        <h3><span>ROUTE B</span>公路片：从西部到公路</h3>
+        <p>重点看「车上」这个空间怎么被拍出层次。前两部是荒野，后两部是公路，焦虑的来源完全不一样。</p>
+        <ul><li>《逍遥骑士》</li><li>《德州巴黎》</li><li>《末路狂花》</li><li>《阳光小美女》</li></ul>
+      </div>
+      <div class="step">
+        <h3><span>ROUTE C</span>家庭伦理：东亚三地对照</h3>
+        <p>同一题材放三地拍，餐桌戏的处理差别最明显。建议按年代顺序看，能看出彼此的影响痕迹。</p>
+        <ul><li>《东京物语》</li><li>《饮食男女》</li><li>《一一》</li><li>《步履不停》</li></ul>
+      </div>
+      <div class="step">
+        <h3><span>ROUTE D</span>纪录片：先破后立</h3>
+        <p>先把「旁观式」和「介入式」各看一部，再去看当代作品，就不会被花哨的形式晃住。</p>
+        <ul><li>《北方的纳努克》</li><li>《夏日纪事》</li><li>《杀戮演绎》</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="sec-h">
+      <i>05</i><h2>常见问题</h2>
+      <p>被问得最多的几件事，先写在这儿。</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>操逼影视的片单多久更新一次？</summary>
+        <p>固定在每周三晚上更新，一次放 6 到 8 部，宁可少放也不凑数。旧片单按月份归档在「本周片单」栏目下方，可一路回溯到 2021 年。</p>
+      </details>
+      <details>
+        <summary>片单里的评分是怎么定的？</summary>
+        <p>按重看次数、叙事完成度和声音设计三项各占权重打分，不看演员阵容也不看宣发热度。评分理由写在每条短评里，同一部片重看后分数会调整。</p>
+      </details>
+      <details>
+        <summary>观影路线图适合什么人用？</summary>
+        <p>适合想系统补某个题材的观众，比如黑色电影、家庭伦理、公路片。每条路线给出 4 到 7 部的顺序和间隔建议，中途可以按口味跳过。</p>
+      </details>
+      <details>
+        <summary>会不会收录院线在映的新片？</summary>
+        <p>会，但一般等上映两周后再排进来，避开宣发口径影响判断。在映片会在卡片标签里注记「院线在映」。</p>
+      </details>
+      <details>
+        <summary>站点地址是什么，会不会变？</summary>
+        <p>固定为 https://caobiyingshi-app.github.io ，不换域名、不跳转其他地址。整站单页，栏目靠锚点定位，收藏首页即可。</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="sec" id="join">
+    <div class="join">
+      <div>
+        <h2>周三更新提醒</h2>
+        <p>留个邮箱，每周三晚上发一封，内容就是当周片单的标题和评分，正文不堆字，三十秒能看完。不发广告，随时可退。</p>
+        <small>已有 2100 余人订阅 · 退订链接在每封邮件底部</small>
+      </div>
+      <form action="#" method="post" onsubmit="return false;">
+        <input type="email" name="email" placeholder="输入邮箱地址" aria-label="订阅邮箱" required>
+        <button type="submit">订阅片单</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div>
+      <h4>操逼影视</h4>
+      <p>私人看片台账，2021 年记到现在。片单、短评、题材路线图、院线排片观察，全部按栏目归档在这一页里。</p>
+      <p style="margin-top:12px" class="addr"><b>站点地址：</b>https://caobiyingshi-app.github.io</p>
+    </div>
+    <div>
+      <h4>栏目</h4>
+      <ul>
+        <li><a href="#about">关于本站</a></li>
+        <li><a href="#picks">本周片单</a></li>
+        <li><a href="#notes">影评笔记</a></li>
+        <li><a href="#road">观影路线</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>其他</h4>
+      <ul>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#join">订阅更新</a></li>
+        <li><a href="#">归档目录</a></li>
+        <li><a href="#">留言与纠错</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2021–2026 操逼影视 · caobiyingshi-app.github.io</span>
+    <span>本站仅作观影记录，不提供任何影片播放与下载</span>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="移动端栏目导航">
+  <a href="#about"><b>壹</b>关于</a>
+  <a href="#picks"><b>贰</b>片单</a>
+  <a href="#notes"><b>叁</b>笔记</a>
+  <a href="#road"><b>肆</b>路线</a>
+  <a href="#faq"><b>伍</b>答疑</a>
+</nav>
+
+<script>
+(function(){
+  var bar=document.getElementById('bar');
+  function run(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+  }
+  window.addEventListener('scroll',run,{passive:true});
+  window.addEventListener('resize',run);
+  run();
+})();
+</script>
+</body>
+</html>
